@@ -510,6 +510,283 @@
       margin-bottom: 12px;
     }
 
+    .feedback-section {
+      padding-top: 20px;
+    }
+
+    .feedback-intro {
+      text-align: center;
+      margin-bottom: 24px;
+      display: grid;
+      gap: 12px;
+      justify-items: center;
+    }
+
+    .feedback-intro .eyebrow {
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.16);
+      border: 1px solid rgba(125, 211, 252, 0.25);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 700;
+    }
+
+    .feedback-intro .lead {
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      padding: 18px 22px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+      max-width: 680px;
+    }
+
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 28px;
+      align-items: start;
+      margin-top: 12px;
+    }
+
+    .feedback-media,
+    .feedback-summary {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .feedback-section.is-visible .feedback-media,
+    .feedback-section.is-visible .feedback-summary {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .feedback-section.is-visible .feedback-summary {
+      transition-delay: 0.12s;
+    }
+
+    .feedback-media {
+      padding: 20px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(10, 18, 33, 0.96));
+      border: 1px solid rgba(125, 211, 252, 0.18);
+      box-shadow: 0 30px 70px rgba(2, 8, 23, 0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feedback-media:hover {
+      transform: translateY(-4px);
+      border-color: rgba(125, 211, 252, 0.35);
+      box-shadow: 0 34px 80px rgba(2, 8, 23, 0.32);
+    }
+
+    .feedback-media {
+      margin-top: -8px;
+    }
+
+    .feedback-image-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 8px;
+    }
+
+    .feedback-image-btn {
+      width: 100%;
+      display: block;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: zoom-in;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .feedback-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: cover;
+      border-radius: 16px;
+      transition: transform 0.35s ease;
+    }
+
+    .feedback-image-btn:hover .feedback-image {
+      transform: scale(1.02);
+    }
+
+    .feedback-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #e0f2fe;
+      background: rgba(5, 15, 32, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(2, 8, 23, 0.22);
+    }
+
+    .feedback-summary {
+      background: linear-gradient(135deg, rgba(14, 27, 48, 0.97), rgba(8, 19, 36, 0.97));
+      border-radius: 26px;
+      border: 1px solid rgba(125, 211, 252, 0.18);
+      box-shadow: 0 28px 70px rgba(2, 8, 23, 0.24);
+      padding: 30px;
+      display: grid;
+      gap: 18px;
+      min-height: 100%;
+    }
+
+    .feedback-summary .quote-mark {
+      font-size: 2.4rem;
+      line-height: 1;
+      color: var(--accent);
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.12);
+    }
+
+    .feedback-summary-text {
+      margin: 0;
+      color: #dce7fb;
+      line-height: 1.85;
+      font-size: 1rem;
+    }
+
+    .feedback-rating {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      color: #fbbf24;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .feedback-rating span {
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .feedback-quote {
+      margin: 0;
+      padding: 16px 18px;
+      border-left: 3px solid rgba(125, 211, 252, 0.4);
+      background: rgba(125, 211, 252, 0.09);
+      color: #e2ecff;
+      border-radius: 0 14px 14px 0;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .feedback-author {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .feedback-cta {
+      margin-top: 30px;
+      display: grid;
+      justify-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .feedback-cta p {
+      margin: 0;
+      color: var(--text);
+      font-size: 1.05rem;
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      padding: 18px 22px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+      max-width: 520px;
+    }
+
+    .feedback-cta-btn {
+      min-width: 220px;
+      justify-content: center;
+    }
+
+    .feedback-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(2, 8, 23, 0.84);
+      backdrop-filter: blur(10px);
+    }
+
+    .feedback-modal.is-open {
+      display: flex;
+    }
+
+    .feedback-modal__content {
+      position: relative;
+      max-width: min(960px, 100%);
+      padding: 14px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 20px 70px rgba(2, 8, 23, 0.42);
+    }
+
+    .feedback-modal__image {
+      display: block;
+      max-width: 100%;
+      max-height: 82vh;
+      width: auto;
+      height: auto;
+      border-radius: 14px;
+    }
+
+    .feedback-modal__close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      border: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: rgba(2, 8, 23, 0.78);
+      color: white;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     footer {
       padding: 34px 0 24px;
       text-align: center;
@@ -534,6 +811,10 @@
       }
 
       .split {
+        grid-template-columns: 1fr;
+      }
+
+      .feedback-grid {
         grid-template-columns: 1fr;
       }
 
@@ -570,6 +851,7 @@
       <div class="nav-links">
         <a href="#overview">Overview</a>
         <a href="#services">Services</a>
+        <a href="#feedback">Feedback</a>
         <a href="#recruitment">Recruitment</a>
         <a href="#contact">Contact</a>
       </div>
@@ -708,6 +990,42 @@
     </div>
   </section>
 
+  <section class="section feedback-section" id="feedback" aria-labelledby="feedback-title">
+    <div class="container">
+      <div class="feedback-intro">
+        <p class="eyebrow">Client Feedback</p>
+        <h2 id="feedback-title">Feedback From Our Clients</h2>
+      </div>
+
+      <div class="feedback-grid">
+        <div class="feedback-media">
+          <div class="feedback-image-wrap">
+            <button class="feedback-image-btn" type="button" data-open-modal aria-label="Open client testimonial image">
+              <img src="images/reviewbyclient.jpeg" alt="Client WhatsApp feedback conversation" class="feedback-image" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='recen6.png';">
+            </button>
+            <span class="feedback-badge">Verified WhatsApp Conversation</span>
+          </div>
+        </div>
+
+        <div class="feedback-summary">
+          <div class="quote-mark" aria-hidden="true">❝</div>
+          <p class="feedback-summary-text">Payment was successfully received, and the client expressed satisfaction with our work. They also mentioned that they hope to work with us again in the future, reflecting the trust and positive relationship built throughout the project.</p>
+          <div class="feedback-rating" aria-label="Client satisfaction rating">
+            ⭐⭐⭐⭐⭐
+            <span>5.0 Client Satisfaction</span>
+          </div>
+          <blockquote class="feedback-quote">"Hope we'll have the opportunity to work together again in the future."</blockquote>
+          <p class="feedback-author">— Happy Client</p>
+        </div>
+      </div>
+
+      <div class="feedback-cta">
+        <p>Ready to become our next satisfied client?</p>
+        <a class="cta feedback-cta-btn" href="#contact">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="contact">
     <div class="container">
       <h2>Contact Information</h2>
@@ -728,11 +1046,75 @@
     </div>
   </section>
 
+  <div class="feedback-modal" id="feedbackModal" role="dialog" aria-label="Client testimonial image preview" inert>
+    <div class="feedback-modal__content">
+      <button class="feedback-modal__close" type="button" aria-label="Close image preview">×</button>
+      <img src="" alt="Client WhatsApp feedback conversation" class="feedback-modal__image" data-modal-image>
+    </div>
+  </div>
+
   <footer>
     <div class="container">
       <p>TEKNOVYRA SOLUTIONS © 2026. All rights reserved.</p>
       <p><a href="#overview">Back to top</a></p>
     </div>
   </footer>
+
+  <script>
+    const feedbackSection = document.querySelector('.feedback-section');
+    const feedbackModal = document.getElementById('feedbackModal');
+    const feedbackModalImage = feedbackModal?.querySelector('[data-modal-image]');
+    const feedbackModalClose = feedbackModal?.querySelector('.feedback-modal__close');
+
+    if (feedbackSection) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            feedbackSection.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+
+      observer.observe(feedbackSection);
+    }
+
+    const openFeedbackModal = () => {
+      if (!feedbackModal || !feedbackModalImage) return;
+      const trigger = document.querySelector('[data-open-modal]');
+      if (!trigger) return;
+      const image = trigger.querySelector('img');
+      feedbackModalImage.src = image?.src || '';
+      feedbackModalImage.alt = image?.alt || 'Client testimonial preview';
+      feedbackModal.classList.add('is-open');
+      feedbackModal.removeAttribute('inert');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeFeedbackModal = () => {
+      if (!feedbackModal || !feedbackModalImage) return;
+      feedbackModal.classList.remove('is-open');
+      feedbackModal.setAttribute('inert', '');
+      feedbackModalImage.removeAttribute('src');
+      document.body.style.overflow = '';
+    };
+
+    document.querySelector('[data-open-modal]')?.addEventListener('click', openFeedbackModal);
+    feedbackModalClose?.addEventListener('click', closeFeedbackModal);
+    feedbackModal?.addEventListener('click', (event) => {
+      if (event.target === feedbackModal) {
+        closeFeedbackModal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && feedbackModal?.classList.contains('is-open')) {
+        closeFeedbackModal();
+      }
+    });
+  </script>
 </body>
 </html>
+Invoke-WebRequest "https://www.google.com/search?q=site:teknovyrasolutions.in" -UseBasicParsing | Select-Object StatusCodeInvoke-WebRequest "https://www.google.com/search?q=site:teknovyrasolutions.in" -UseBasicParsing | Select-Object StatusCodeInvoke-WebRequest "https://www.google.com/search?q=site:teknovyrasolutions.in" -UseBasicParsing | Select-Object StatusCode
