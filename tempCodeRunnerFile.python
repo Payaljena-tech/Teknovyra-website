@@ -1,0 +1,11 @@
+#bill roulette
+#instructions:
+#Create a program which asks for names and select random name from the list. The person selected will have to pay for everybody's food bill.
+
+import random
+
+names_string = "John, Paul, George, Ringo"
+names = names_string.split(", ")
+
+selected_name = random.choice(names)
+print(f"{selected_name} will pay for everyone's food bill.")
